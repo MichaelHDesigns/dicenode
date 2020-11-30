@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Dicenode
+Comment=Dicenode P2P Cryptocurrency
+Exec=dicenode-qt %u
+Terminal=false
+Type=Application
+Icon=dicenode128
+MimeType=x-scheme-handler/dicenode;
+Categories=Office;Finance;
+Name[en_US]=dicenode-qt.desktop

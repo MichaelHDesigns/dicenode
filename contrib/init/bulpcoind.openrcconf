@@ -1,0 +1,26 @@
+# /etc/conf.d/dicenoded: config file for /etc/init.d/dicenoded
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/dicenode/dicenode.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/dicenoded"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/dicenoded.pid"
+
+# Where to write dicenoded data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/dicenoded"
+
+# User and group to own dicenoded process
+#BITCOIND_USER="dicenode"
+#BITCOIND_GROUP="dicenode"
+
+# Path to dicenoded executable
+#BITCOIND_BIN="/usr/bin/dicenoded"
+
+# Nice value to run dicenoded under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
