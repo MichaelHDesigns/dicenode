@@ -1556,23 +1556,28 @@ int64_t GetBlockValue(int nHeight)
     int64_t nSubsidy = 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-             if (nHeight >=      1 && nHeight <=      1) {nSubsidy = 2500000.00 * COIN;}
-        else if (nHeight >=      2 && nHeight <=    500) {nSubsidy =     190.20 * COIN;}
-        else if (nHeight >=    501 && nHeight <=   1000) {nSubsidy =       1.50 * COIN;}
-        else if (nHeight >=   1001 && nHeight <=   2000) {nSubsidy =       1.70 * COIN;}
-        else if (nHeight >=   2001 && nHeight <=   3000) {nSubsidy =       1.90 * COIN;}
-        else if (nHeight >=   3001 && nHeight <=   4000) {nSubsidy =       2.10 * COIN;}
-        else if (nHeight >=   4001 && nHeight <=   5000) {nSubsidy =       2.30 * COIN;}
-        else if (nHeight >=   5001                     ) {nSubsidy =       2.50 * COIN;}
+         if (nHeight >=       1 && nHeight <=       1) {nSubsidy =  20000000.00 * COIN;}
+        else if (nHeight >=      2 && nHeight <=    1000) {nSubsidy =     20000 * COIN;}
+        else if (nHeight >=    1001 && nHeight <=   2000) {nSubsidy =       10000 * COIN;}
+        else if (nHeight >=   2001 && nHeight <=   3000) {nSubsidy =       5000 * COIN;}
+        else if (nHeight >=   3001 && nHeight <=   4000) {nSubsidy =       2500 * COIN;}
+        else if (nHeight >=   4001 && nHeight <=   5000) {nSubsidy =       1250 * COIN;}
+        else if (nHeight >=   5001 && nHeight <=   6000) {nSubsidy =       625 * COIN;}
+        else if (nHeight >=   6001                     ) {nSubsidy =       312.5 * COIN;}
 
         return nSubsidy;
     }
 
     /* block rewards. */
 
-         if (nHeight >=       1 && nHeight <=       1) {nSubsidy =  210000.00 * COIN;}
-    else if (nHeight >=       2 && nHeight <=   100000) {nSubsidy =       2.00 * COIN;}
-    else if (nHeight >= 100000 )                      {nSubsidy =       1.00 * COIN;}
+         if (nHeight >=       1 && nHeight <=       1) {nSubsidy =  20000000.00 * COIN;}
+        else if (nHeight >=      2 && nHeight <=    1000) {nSubsidy =     20000 * COIN;}
+        else if (nHeight >=    1001 && nHeight <=   2000) {nSubsidy =       10000 * COIN;}
+        else if (nHeight >=   2001 && nHeight <=   3000) {nSubsidy =       5000 * COIN;}
+        else if (nHeight >=   3001 && nHeight <=   4000) {nSubsidy =       2500 * COIN;}
+        else if (nHeight >=   4001 && nHeight <=   5000) {nSubsidy =       1250 * COIN;}
+        else if (nHeight >=   5001 && nHeight <=   6000) {nSubsidy =       625 * COIN;}
+        else if (nHeight >=   6001                     ) {nSubsidy =       312.5 * COIN;}
 
     //Enable to cap the coin supply
     // Check if we reached the coin max supply.
@@ -1594,13 +1599,13 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
     /* Masternode rewards. */
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-             if (nHeight >=      1 && nHeight <=      500) {nSubsidy = 0;}
+             if (nHeight >=      1 && nHeight <=      1000) {nSubsidy = 0;}
         else if (nHeight >=    501                     ) {nSubsidy = blockValue * 0.70;}
 
         return nSubsidy;
     }
 
-         if (nHeight >=       1 && nHeight <=    200)  {nSubsidy = 0;}
+         if (nHeight >=       1 && nHeight <=    5000)  {nSubsidy = 0;}
     else if (nHeight >=     201 )                       {nSubsidy = blockValue * 0.70;}
 
     return nSubsidy;
@@ -1609,10 +1614,10 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 int64_t GetTreasuryPayment(int nHeight, int64_t blockValue)
 {
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        if (nHeight >= 501 )
+        if (nHeight >= 1000 )
             return blockValue * 0.01;
     } else {
-        if (nHeight >= 2001 )
+        if (nHeight >= 1001 )
             return blockValue * 0.01;
     }
 
